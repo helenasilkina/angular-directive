@@ -1,0 +1,46 @@
+.travel-tree {display: inline-block; width: 67%;}
+.tree-select {position: relative;}
+
+.travel-unit-item {position: relative; min-height: 25px; list-style: none; font-family: Arial; font-size: 12px; color: #797979; background-image: linear-gradient(90deg, transparent 19px, #dedede 20px); background-size: 20px 20px; cursor: pointer; }	
+.travel-unit-item-selected,  
+.travel-unit-item-selected .travel-unit-text {color: #cf1635; background-color: #ffe8c4;}
+.travel-unit-item:hover { color: #cf1635;}
+.travel-unit-text {position: absolute; left: 200px; right: 0; display: block; line-height: 25px; background-color: #fff;}
+
+.travel-unit-text-0 { left: 0;}
+.travel-unit-text-1 { left: 20px;}
+.travel-unit-text-2 { left: 40px;}
+.travel-unit-text-3 { left: 60px;}
+.travel-unit-text-4 { left: 80px;}
+.travel-unit-text-5 { left: 100px;}
+.travel-unit-text-6 { left: 120px;}
+.travel-unit-text-7 { left: 140px;}
+.travel-unit-text-8 { left: 160px;}
+.travel-unit-text-9 { left: 180px;}
+
+.travel-unit-separator {position: relative; display: inline-block; margin-left: -7px; margin-right: 8px; border-radius: 6px; border: 1px solid #7d7d7d; width: 13px; height: 13px; text-align: center; line-height: 1; color: #000; background-color: #f3f3f3;}
+.travel-unit-separator:hover { border-color: #cf1635; color: #cf1635;}
+.travel-unit-separator-minus { line-height: 11px; } 
+.travel-unit-child {top: -3px; margin: 0 15px 0 -2px; border-color: transparent; width: 3px; height: 3px; background-color: #9b9b9b;}
+.travel-unit-bg { position: absolute; top: 0; left: 2px; width: 10px; height: 1px; background-color: #dedede;}
+
+.tree-select .tree-bg { position: fixed; width: 100%; height: 100%; z-index: 98; margin: 0; padding: 0; top: 0; left: 0; }
+.travel-tree input.search-input[type='text'] {width: 100%; border-radius: 1px; border: 1px solid #fff; height: 28px; padding: 5px 20px 4px 10px; background-color: #fafafa; box-shadow: 1px 1px 5px rgba(148, 148, 148, 0.9) inset;}
+.travel-tree input::-webkit-input-placeholder,
+.travel-tree input:-ms-input-placeholder, 
+.travel-tree input:-moz-placeholder {font-size: 13px; line-height: 17px; font-family: Arial; color: #6f6f6f;}
+.tree-show-button-wrapper  {position: absolute; top: 0; right: 0; width: 30px; height: 100%; cursor: pointer;}
+.travel-tree .show-tree-button {display: inline-block; position: absolute; top: 13px; right: 6px; width: 0; height: 0; border-top: 4px solid; border-right: 4px solid transparent; border-left: 4px solid transparent;}
+
+.tree-select .dropdown {position: absolute; top: 100%; left: 0; margin-top: -1px; width: 100%; max-height: 300px; overflow: auto;}
+.dropdown .travel-unit-item {border-left: 1px solid #ccc; border-right: 1px solid #ccc; background: #fff;}
+.dropdown .travel-unit-item:first-child {border-top: 1px solid #ccc; margin-top: 10px;}
+.dropdown .travel-unit-item:last-child {border-bottom: 1px solid #ccc;}
+.tree-select .node-label {display: inline-block;}
+.tree-select .last-child .travel-unit-text:after {display: block; content: ''; position: absolute; height: 11px; width: 10px; bottom: 0; left: -5px; background: #fff;}
+input[type=checkbox].travel-tree-checkbox {margin: -1px 4px 0 0;} 
+
+.tree-select .dropdown.search .node-label {padding: 5px;}
+.tree-select .search-input, 
+.tree-select .show-tree-button, 
+.tree-select .dropdown { z-index: 99;}

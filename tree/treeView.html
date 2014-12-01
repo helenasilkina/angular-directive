@@ -1,0 +1,37 @@
+<div class="tree-select">
+	<div class="tree-bg" ng-click="_treeVisible = false; _searchVisible = false;" ng-show="(_treeVisible || _searchVisible)"></div>
+	<input type="text"
+		   class="search-input"
+		   ng-model="query.name"
+		   ng-focus="_treeVisible = false; _searchVisible = true;"
+		   placeholder="{{selectedText}}" />
+	<span class="tree-show-button-wrapper" ng-click="_treeVisible = !_treeVisible; _searchVisible = false;">
+		<span class="show-tree-button" ng-class="{'visible':_treeVisible}"></span>
+	</span>
+	<ul class="dropdown tree" ng-if="_treeVisible">
+		<li class="travel-unit-item"
+			ng-repeat="node in nodesList"
+			id="{{node.id}}"
+			ng-class="{'collapsible' : (node._children && node._children.length > 0), 'last-child': isLastChild(node), 'expand': isExpand(node)}"
+			ng-if="node._display && (!node._parent || node._parent._display)">
+			<p class="travel-unit-text travel-unit-text-{{node._indent}}">
+				<span ng-show="node._children && node._children.length > 0 && !isExpand(node)" class="travel-unit-separator" ng-click="toggleExpand(node, $event)">+</span>
+				<span ng-show="node._children && node._children.length > 0 && isExpand(node)" class="travel-unit-separator travel-unit-separator-minus" ng-click="toggleExpand(node, $event)">-</span>
+				<span ng-show="node._children.length == 0" class="travel-unit-separator travel-unit-child">
+					<span class="travel-unit-bg">&nbsp;</span>
+				</span>
+				<input class="travel-tree-checkbox" ng-model="node._isChecked" type="checkbox" ng-change="checkedNode(node)" />
+				<span class="node-label">{{node.name}}</span>
+			</p>
+		</li>
+	</ul>
+		<ul class="dropdown search" ng-if="query.name!='' && query.name.length>=3 && _searchVisible">
+			<li class="travel-unit-item" ng-repeat="node in nodesList | filter:query"
+				id="{{node.id}}"
+				ng-class="{'selected': node._isChecked}"
+				ng-click="changeNode(node)">
+				<input ng-model="node._isChecked" type="checkbox" ng-change="checkedNode(node)" />
+				<span class="node-label">{{node.name}}</span>
+			</li>
+		</ul>
+</div>
