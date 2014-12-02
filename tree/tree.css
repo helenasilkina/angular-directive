@@ -1,4 +1,3 @@
-.travel-tree {display: inline-block;}
 .tree-select {position: relative;}
 
 .travel-unit-item {position: relative; min-height: 25px; list-style: none; font-family: Arial; font-size: 12px; color: #797979; background-image: linear-gradient(90deg, transparent 19px, #dedede 20px); background-size: 20px 20px; cursor: pointer; }	
@@ -22,11 +21,8 @@
 .travel-unit-child {top: -3px; margin: 0 15px 0 -2px; border-color: transparent; width: 3px; height: 3px; background-color: #9b9b9b;}
 .travel-unit-bg { position: absolute; top: 0; left: 2px; width: 10px; height: 1px; background-color: #dedede;}
 
-.tree-select .tree-bg { position: fixed; width: 100%; height: 100%; z-index: 98; margin: 0; padding: 0; top: 0; left: 0; }
+.tree-bg { position: fixed; width: 100%; height: 100%; z-index: 98; margin: 0; padding: 0; top: 0; left: 0; }
 .travel-tree input.search-input[type='text'] {width: 100%; border-radius: 1px; border: 1px solid #fff; height: 28px; padding: 5px 20px 4px 10px; background-color: #fafafa; box-shadow: 1px 1px 5px rgba(148, 148, 148, 0.9) inset;}
-.travel-tree input::-webkit-input-placeholder,
-.travel-tree input:-ms-input-placeholder, 
-.travel-tree input:-moz-placeholder {font-size: 13px; line-height: 17px; font-family: Arial; color: #6f6f6f;}
 .tree-show-button-wrapper  {position: absolute; top: 0; right: 0; width: 30px; height: 100%; cursor: pointer;}
 .travel-tree .show-tree-button {display: inline-block; position: absolute; top: 13px; right: 6px; width: 0; height: 0; border-top: 4px solid; border-right: 4px solid transparent; border-left: 4px solid transparent;}
 
