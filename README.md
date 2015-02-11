@@ -1,4 +1,4 @@
 angular-directive
 =================
 
-angular directive
+angular directives
