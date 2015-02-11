@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script src="peoplepicker.js"></script>
+	<script src="app.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="peoplepicker.css" rel="stylesheet">
+  </head>
+  <body>
+	<div class='container-fluid' ng-controller="TypeaheadCtrl" style="margin: 100px auto; width: 600px;" >		
+		<peoplepicker selected="peopleSelected" url="peopleQuery"></peoplepicker>
+	</div>
+  </body>
+</html>
