@@ -9,7 +9,7 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'peoplepickerModule', 'ngMo
             var name = decodeURIComponent(url.slice(url.indexOf('=')+1, url.length));
             var response = [];
             for (var i = 10; i--;) {
-                var rand = parseInt(Math.random() * 100)
+                var rand = parseInt(Math.random() * 100);
                 response.push({
                     Name: name + rand,
                     Id: 'id_' + name + rand

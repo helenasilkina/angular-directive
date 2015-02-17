@@ -1,10 +1,11 @@
-angular.module('peoplepickerModule', ['ui.bootstrap'])
+ï»¿angular.module('peoplepickerModule', ['ui.bootstrap'])
 .directive('peoplepicker', function () {
 	return {
 		restrict: 'E',
 		scope: {
 			selected: '=',
-			url: '='
+			url: '=',
+			multi: '='
 		},
 		controller: function($scope,  $http) {
 			$scope.getSelectedPeople = function() {
@@ -40,8 +41,9 @@ angular.module('peoplepickerModule', ['ui.bootstrap'])
 									'{{name}}' +
 									'<span class="peoplepicker-remove" ng-click="removePeople($index)">X</span>' +
 								'</li>' +
-							'</ul>' +
-							'<input class="peoplepicker-input"  ng-model="findPeople" type="text" placeholder="Ââåäèòå áîëåå 3 ñèìâîëîâ" typeahead-on-select="getSelectedPeople()" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
+							'</ul>' + 
+							'<input class="peoplepicker-input" ng-show="multi" ng-model="findPeople" type="text" placeholder="Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 3 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð°" typeahead-on-select="getSelectedPeople()" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
+							'<input class="peoplepicker-input" ng-hide="multi" type="text" ng-model="findPeople" placeholder="Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 3 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð°" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
 							'<i ng-show="loadingLocations" class="peoplepicker-refresh glyphicon glyphicon-refresh"></i>' +
 					'</div>',
 		replace: true
