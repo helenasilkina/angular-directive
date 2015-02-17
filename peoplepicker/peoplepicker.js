@@ -1,4 +1,4 @@
-﻿angular.module('peoplepickerModule', ['ui.bootstrap'])
+angular.module('peoplepickerModule', ['ui.bootstrap'])
 .directive('peoplepicker', function () {
 	return {
 		restrict: 'E',
@@ -42,8 +42,8 @@
 									'<span class="peoplepicker-remove" ng-click="removePeople($index)">X</span>' +
 								'</li>' +
 							'</ul>' + 
-							'<input class="peoplepicker-input" ng-show="multi" ng-model="findPeople" type="text" placeholder="Введите 3 символа" typeahead-on-select="getSelectedPeople()" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
-							'<input class="peoplepicker-input" ng-hide="multi" type="text" ng-model="findPeople" placeholder="Введите 3 символа" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
+							'<input class="peoplepicker-input" ng-show="multi" ng-model="findPeople" type="text" placeholder="Введите более 3 символа" typeahead-on-select="getSelectedPeople()" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
+							'<input class="peoplepicker-input" ng-hide="multi" type="text" ng-model="findPeople" placeholder="Введите более 3 символа" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
 							'<i ng-show="loadingLocations" class="peoplepicker-refresh glyphicon glyphicon-refresh"></i>' +
 					'</div>',
 		replace: true
