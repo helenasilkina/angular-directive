@@ -1,13 +1,16 @@
-angular.module('peoplepickerModule', ['ui.bootstrap'])
+﻿angular.module('peoplepickerModule', ['ui.bootstrap'])
 .directive('peoplepicker', function () {
 	return {
 		restrict: 'E',
 		scope: {
 			selected: '=',
-			url: '=',
-			multi: '='
+			url: '='
 		},
 		controller: function($scope,  $http) {
+			this.addMultiple = function(isMultiple) {
+				$scope.multi = isMultiple;
+			}
+			
 			$scope.getSelectedPeople = function() {
 				var selected = $scope.findPeople;
 				
@@ -42,10 +45,19 @@ angular.module('peoplepickerModule', ['ui.bootstrap'])
 									'<span class="peoplepicker-remove" ng-click="removePeople($index)">X</span>' +
 								'</li>' +
 							'</ul>' + 
-							'<input class="peoplepicker-input" ng-show="multi" ng-model="findPeople" type="text" placeholder="Введите более 3 символа" typeahead-on-select="getSelectedPeople()" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
-							'<input class="peoplepicker-input" ng-hide="multi" type="text" ng-model="findPeople" placeholder="Введите более 3 символа" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
+							'<input class="peoplepicker-input" ng-show="multi" ng-model="findPeople" type="text" placeholder="Введите более 3 символов" typeahead-on-select="getSelectedPeople()" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
+							'<input class="peoplepicker-input" ng-hide="multi" type="text" ng-model="findPeople" placeholder="Введите более 3 символов" typeahead="address for address in getPeople($viewValue)" typeahead-loading="loadingLocations">' +
 							'<i ng-show="loadingLocations" class="peoplepicker-refresh glyphicon glyphicon-refresh"></i>' +
 					'</div>',
 		replace: true
+	};
+})
+.directive('multi', function() {
+	return {
+		require: 'peoplepicker',
+		restrict: 'A',
+		link: function(scope, element, attrs, multiCtrl) {
+		  multiCtrl.addMultiple(true);
+		}
 	};
 });
