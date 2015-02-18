@@ -11,7 +11,7 @@
   </head>
   <body>
 	<div class='container-fluid' ng-controller="TypeaheadCtrl" style="margin: 100px auto; width: 600px;" >		
-		<peoplepicker selected="peopleSelected" url="peopleQuery" multi="true"></peoplepicker>
+		<peoplepicker ng-model="peopleSelected" url="peopleQuery" multiple></peoplepicker>
 	</div>
   </body>
 </html>

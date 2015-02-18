@@ -5,8 +5,8 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'peoplepickerModule', 'ngMo
     })
 .run(function ($httpBackend) {
     $httpBackend.whenGET(/\/people/)
-        .respond(function (method, url, data) {
-            var name = decodeURIComponent(url.slice(url.indexOf('=')+1, url.length));
+        .respond(function (method, url) {
+            var name = decodeURIComponent(url.slice(url.lastIndexOf('=') + 1, url.length));
             var response = [];
             for (var i = 10; i--;) {
                 var rand = parseInt(Math.random() * 100);
@@ -15,6 +15,6 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'peoplepickerModule', 'ngMo
                     Id: 'id_' + name + rand
                 });
             }
-            return response;
+            return [200, response];
         })
 });
