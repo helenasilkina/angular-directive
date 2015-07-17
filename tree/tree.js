@@ -1,3 +1,8 @@
+/*
+* Tree UI control
+* @author Helena Silkina
+*/
+
 angular.module('app').directive('tree', function ($compile, $http, $timeout, TreeService, TreeNode) {
 	return {
 		restrict: 'A',
@@ -7,7 +12,7 @@ angular.module('app').directive('tree', function ($compile, $http, $timeout, Tre
 			filterIds: '='
 		},
 		replace: true,
-		templateUrl: '/_layouts/15/Wargaming.TP.Web/views/treeView.html',
+		templateUrl: 'someurl',
         controller: function($scope, $element){
         	$scope.tree = [];
         	$scope.selectedText = "";
