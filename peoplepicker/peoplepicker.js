@@ -1,3 +1,10 @@
+/*
+* import ui.bootstrap
+*
+* People picker UI control
+* @param url to save data
+* @author Helena Silkina
+*/
 ﻿angular.module('peoplepickerModule', ['ui.bootstrap'])
 	.value('config', {
 		url: '/people'
