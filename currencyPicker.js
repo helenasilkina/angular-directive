@@ -1,3 +1,7 @@
+/*
+* Currency picker
+* @author Helena Silkina
+*/
 app.directive('currencyPicker', function () {
     return {
         restrict: 'E',
