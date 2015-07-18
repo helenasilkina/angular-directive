@@ -5,8 +5,7 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'peoplepickerModule', 'ngMo
 		};
 	})
 	.controller('TypeaheadCtrl', function ($scope, $http) {
-			$scope.peopleSelected = [];
-			//$scope.peopleQuery = '/people';
+		$scope.peopleSelected = [];
 	})
 	.run(function ($httpBackend) {
 		$httpBackend.whenGET(/\/people/)
