@@ -1,10 +1,10 @@
 .peoplepicker-wrapper {height: auto; padding: 0;}
-.peoplepicker-wrapper:hover{border: 1px solid #5897fb;}
+.peoplepicker-wrapper:hover {border: 1px solid #5897fb;}
 ul.peoplepicker-list {margin: 0; padding: 6px 12px 6px 7px;}
 .peoplepicker-list-item {list-style: none; display: inline-block; position: relative; margin: 3px 0 3px 5px; padding: 3px 5px 3px 21px; border: 1px solid #aaa; border-radius: 3px; font-size: 13px;}
 .peoplepicker-remove {display: block; position: absolute; top: 50%; left: 3px; margin-top: -7px; width: 12px; height: 13px; color: #555; font-size: 10px; line-height: 13px; text-align: center; cursor: pointer;}
 .peoplepicker-remove:hover {color: red;}
-.peoplepicker-input {border: 0; width: 100%; padding: 6px 12px 6px;}
+.peoplepicker-input {border: 0; width: 100%; padding: 6px 12px;}
 .peoplepicker-input:focus {border: 0; outline: none; box-shadow: none;}
 .peoplepicker-refresh {float: right; margin: -20px 12px 0 0;}
 
