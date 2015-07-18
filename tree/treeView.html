@@ -25,13 +25,13 @@
 			</p>
 		</li>
 	</ul>
-		<ul class="dropdown search" ng-if="query.name!='' && query.name.length>=3 && _searchVisible">
-			<li class="travel-unit-item" ng-repeat="node in nodesList | filter:query"
-				id="{{node.id}}"
-				ng-class="{'selected': node._isChecked}"
-				ng-click="changeNode(node)">
-				<input ng-model="node._isChecked" type="checkbox" ng-change="checkedNode(node)" />
-				<span class="node-label">{{node.name}}</span>
-			</li>
-		</ul>
+	<ul class="dropdown search" ng-if="query.name!='' && query.name.length >=3 && _searchVisible">
+		<li class="travel-unit-item" ng-repeat="node in nodesList | filter:query"
+			id="{{node.id}}"
+			ng-class="{'selected': node._isChecked}"
+			ng-click="changeNode(node)">
+			<input ng-model="node._isChecked" type="checkbox" ng-change="checkedNode(node)" />
+			<span class="node-label">{{node.name}}</span>
+		</li>
+	</ul>
 </div>
