@@ -4,7 +4,6 @@
 * @param: selected - current selected tree node
 * @param: ngSetNode - select tree node by name 
 * @param: filterIds - id of tree nodes
-* @author Helena Silkina
 */
 
 angular.module('app').directive('tree', function ($compile, $http, $timeout, TreeService, TreeNode) {
