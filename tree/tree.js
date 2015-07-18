@@ -1,5 +1,9 @@
 /*
 * Tree UI control
+* 
+* @param: selected - current selected tree node
+* @param: ngSetNode - select tree node by name 
+* @param: filterIds - id of tree nodes
 * @author Helena Silkina
 */
 
