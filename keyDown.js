@@ -1,7 +1,6 @@
 // <input type="text" ng-keydown="onKeydown">
 
-var mod = angular.module('mydirectives');
-mod.directive('ngKeydown', function() {
+angular.module('mydirectives').directive('ngKeydown', function() {
   return {
   restrict: 'A',
   link: function(scope, elem, attrs) {
